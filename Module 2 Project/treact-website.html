@@ -3,17 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Module 2 Final Project</title>
     <link rel="stylesheet" href="style.css" />
     <script
       src="https://kit.fontawesome.com/507cd13abb.js"
       crossorigin="anonymous"
     ></script>
+    <script src="index.js"></script>
   </head>
   <body>
     <section id="landing">
       <nav>
-        <div class="nav__container row">
+        <div class="nav__row row">
           <div class="nav__logo">
             <img
               class="nav__logo--img"
@@ -22,24 +23,34 @@
             />
             <div class="nav__logo--title">Treact</div>
           </div>
-          <ul class="nav__links">
-            <li><a href="#" class="nav__link">About</a></li>
-            <li><a href="#" class="nav__link no-cursor">Blog</a></li>
-            <li><a href="#" class="nav__link no-cursor">Pricing</a></li>
-            <li><a href="#" class="nav__link no-cursor">Contact Us</a></li>
-            <li>
-              <a href="#" class="nav__link nav__link--primary no-cursor"
-                >Login</a
-              >
-            </li>
-            <li>
-              <a href="#features" class="nav__link nav__link--secondary"
-                >Sign Up</a
-              >
-            </li>
-          </ul>
+          <div class="nav__links">
+            <a href="#" class="nav__link">About</a>
+            <a href="#" class="nav__link ">Blog</a>
+            <a href="#" class="nav__link ">Pricing</a>
+            <a href="#" class="nav__link ">Contact Us<a>
+            <a href="#" class="nav__link login">Login</a>
+            <a href="#" class="nav__link nav__link--secondary">Sign Up</a>
+          </div>
+          <button class="btn__menu" onclick="oenMenu()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn__menu--svg">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
         </div>
       </nav>
+      <div class="menu">
+        <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="light___StyledCloseIcon-lj69nl-14 fASujC">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <div class="menu__links">
+
+        </div>
+      </div>
       <header>
         <div class="container">
           <div class="row">
@@ -217,20 +228,6 @@
             </div>
           </div>
         </div>
-        <svg
-          width="600"
-          height="600"
-          viewBox="0 0 600 600"
-          xmlns="http://www.w3.org/2000/svg"
-          class="features__blob"
-        >
-          <g transform="translate(300,300)">
-            <path
-              d="M125,-160.4C159.9,-146.7,184.6,-107.3,178.8,-70.9C173.1,-34.4,137,-0.8,128.8,47.3C120.7,95.5,140.6,158.2,123.8,198.4C107,238.6,53.5,256.3,5.4,248.9C-42.7,241.5,-85.4,208.9,-112.7,172.1C-140,135.3,-151.8,94.2,-146.3,59.7C-140.8,25.1,-117.9,-2.9,-104,-30.1C-90.1,-57.3,-85,-83.7,-69.1,-103.5C-53.3,-123.4,-26.6,-136.7,9.2,-149.4C45.1,-162,90.1,-174,125,-160.4Z"
-              fill="#FFB4BC"
-            ></path>
-          </g>
-        </svg>
       </section>
       <section id="quality">
         <div class="container">
@@ -332,7 +329,10 @@
                 We Always Abide by Our <span class="purple">Principles.</span>
               </h2>
               <div class="section__para">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
               </div>
               <div class="values__list">
                 <div class="value">
@@ -343,8 +343,9 @@
                     <div class="value__name">Affordable</div>
                   </div>
                   <div class="value__para">
-                                    We promise to offer you the best rate we can - at par with the industry standard.
-                                </div>
+                    We promise to offer you the best rate we can - at par with
+                    the industry standard.
+                  </div>
                 </div>
                 <div class="value">
                   <div class="value__title">
@@ -354,13 +355,18 @@
                     <div class="value__name">Professionalism</div>
                   </div>
                   <div class="value__para">
-                                   We assure you that our templates are designed and created by professional designers. 
-                                </div>
+                    We assure you that our templates are designed and created by
+                    professional designers.
+                  </div>
                 </div>
               </div>
               <button class="btn">Learn More</button>
             </div>
-            <img src="./assets/prototype-illustration.21bc4b3f612a2f257c3d361067582485.svg" alt="" class="values__img">
+            <img
+              src="./assets/prototype-illustration.21bc4b3f612a2f257c3d361067582485.svg"
+              alt=""
+              class="values__img"
+            />
           </div>
         </div>
       </section>
@@ -368,8 +374,13 @@
         <div class="container">
           <div class="row">
             <div class="section__tag">Pricing</div>
-            <h2 class="section__title">Reasonable & Flexible <span class="purple">Plans.</span></h2>
-            <p class="section__para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <h2 class="section__title">
+              Reasonable & Flexible <span class="purple">Plans.</span>
+            </h2>
+            <p class="section__para">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
             <div class="plans">
               <div class="plan">
                 <div class="plan__stripe"></div>
@@ -425,9 +436,18 @@
                   <button class="plan__button">buy now</button>
                 </div>
               </div>
-              <svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" class="plans__blob">
+              <svg
+                width="600"
+                height="600"
+                viewBox="0 0 600 600"
+                xmlns="http://www.w3.org/2000/svg"
+                class="plans__blob"
+              >
                 <g transform="translate(300,300)">
-                  <path d="M82,-98.3C129.8,-57.7,208.2,-54.1,229.6,-26.6C251.1,1,215.6,52.5,172.9,74.9C130.2,97.2,80.3,90.4,37.8,107.5C-4.8,124.7,-40,165.7,-63.3,162.3C-86.5,158.8,-97.8,110.9,-109.3,72.2C-120.7,33.5,-132.2,4.1,-140.1,-37.4C-147.9,-79,-152.1,-132.6,-128.1,-177.3C-104.1,-222.1,-52.1,-258,-17.5,-237.2C17.1,-216.4,34.3,-138.9,82,-98.3Z" fill="#FFB4BC"></path>
+                  <path
+                    d="M82,-98.3C129.8,-57.7,208.2,-54.1,229.6,-26.6C251.1,1,215.6,52.5,172.9,74.9C130.2,97.2,80.3,90.4,37.8,107.5C-4.8,124.7,-40,165.7,-63.3,162.3C-86.5,158.8,-97.8,110.9,-109.3,72.2C-120.7,33.5,-132.2,4.1,-140.1,-37.4C-147.9,-79,-152.1,-132.6,-128.1,-177.3C-104.1,-222.1,-52.1,-258,-17.5,-237.2C17.1,-216.4,34.3,-138.9,82,-98.3Z"
+                    fill="#FFB4BC"
+                  ></path>
                 </g>
               </svg>
             </div>
@@ -437,12 +457,20 @@
       <section id="testimonials">
         <div class="container">
           <div class="row">
-            <img src="./assets/love-illustration.c759090fa833369ad6ffb6eb19cacb3e.svg" alt="" class="testimonials__img">
+            <img
+              src="./assets/love-illustration.c759090fa833369ad6ffb6eb19cacb3e.svg"
+              alt=""
+              class="testimonials__img"
+            />
             <div class="testimonials__description">
               <div class="section__tag">testimonials</div>
-              <h2 class="section__title">Our Clients <span class="purple">Love Us.</span></h2>
+              <h2 class="section__title">
+                Our Clients <span class="purple">Love Us.</span>
+              </h2>
               <p class="section__para">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam. 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua enim
+                ad minim veniam.
               </p>
               <div class="testimonial">
                 <div class="testimonial__rating">
@@ -454,11 +482,19 @@
                 </div>
                 <h3 class="testimonial__title">Amazing User Experience</h3>
                 <p class="testimonial__para">
-                  "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+                  "Duis aute irure dolor in reprehenderit in voluptate velit
+                  esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                  occaecat cupidatat non proident, sunt in culpa qui officia.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco."
                 </p>
                 <div class="testimonial__bottom">
                   <div class="testimonial__profile">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1…yJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3.25&w=512&h=512&q=80" class="testimonial__img">
+                    <img
+                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1…yJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3.25&w=512&h=512&q=80"
+                      class="testimonial__img"
+                    />
                     <div class="testimonial__details">
                       <div class="testimonial__name">Charlotte Hale</div>
                       <div class="testimonial__role">Director, Delos Inc.</div>
@@ -484,17 +520,25 @@
           <div class="row">
             <svg viewBox="0 0 600 600" class="start__blob--1">
               <g transform="translate(300,300)">
-                <path d="M153.6,-239C199.1,-209.8,236,-167.2,258.4,-118C280.9,-68.9,288.9,-13.1,281.2,40.4C273.5,93.9,250.1,145.2,214.7,186.1C179.3,226.9,131.9,257.4,80,272.6C28.2,287.8,-28.2,287.8,-80,272.6C-131.9,257.4,-179.3,226.9,-214.7,186.1C-250.1,145.2,-273.5,93.9,-281.2,40.4C-288.9,-13.1,-280.9,-68.9,-258.4,-118C-236,-167.2,-199.1,-209.8,-153.6,-239C-108.1,-268.3,-54.1,-284.1,0,-284.1C54.1,-284.1,108.1,-268.3,153.6,-239Z" fill="rgb(80,17,204)"></path>
+                <path
+                  d="M153.6,-239C199.1,-209.8,236,-167.2,258.4,-118C280.9,-68.9,288.9,-13.1,281.2,40.4C273.5,93.9,250.1,145.2,214.7,186.1C179.3,226.9,131.9,257.4,80,272.6C28.2,287.8,-28.2,287.8,-80,272.6C-131.9,257.4,-179.3,226.9,-214.7,186.1C-250.1,145.2,-273.5,93.9,-281.2,40.4C-288.9,-13.1,-280.9,-68.9,-258.4,-118C-236,-167.2,-199.1,-209.8,-153.6,-239C-108.1,-268.3,-54.1,-284.1,0,-284.1C54.1,-284.1,108.1,-268.3,153.6,-239Z"
+                  fill="rgb(80,17,204)"
+                ></path>
               </g>
             </svg>
             <svg viewBox="0 0 600 600" class="start__blob--2">
               <g transform="translate(300,300)">
-                <path d="M153.6,-239C199.1,-209.8,236,-167.2,258.4,-118C280.9,-68.9,288.9,-13.1,281.2,40.4C273.5,93.9,250.1,145.2,214.7,186.1C179.3,226.9,131.9,257.4,80,272.6C28.2,287.8,-28.2,287.8,-80,272.6C-131.9,257.4,-179.3,226.9,-214.7,186.1C-250.1,145.2,-273.5,93.9,-281.2,40.4C-288.9,-13.1,-280.9,-68.9,-258.4,-118C-236,-167.2,-199.1,-209.8,-153.6,-239C-108.1,-268.3,-54.1,-284.1,0,-284.1C54.1,-284.1,108.1,-268.3,153.6,-239Z" fill="rgb(80,17,204)"></path>
+                <path
+                  d="M153.6,-239C199.1,-209.8,236,-167.2,258.4,-118C280.9,-68.9,288.9,-13.1,281.2,40.4C273.5,93.9,250.1,145.2,214.7,186.1C179.3,226.9,131.9,257.4,80,272.6C28.2,287.8,-28.2,287.8,-80,272.6C-131.9,257.4,-179.3,226.9,-214.7,186.1C-250.1,145.2,-273.5,93.9,-281.2,40.4C-288.9,-13.1,-280.9,-68.9,-258.4,-118C-236,-167.2,-199.1,-209.8,-153.6,-239C-108.1,-268.3,-54.1,-284.1,0,-284.1C54.1,-284.1,108.1,-268.3,153.6,-239Z"
+                  fill="rgb(80,17,204)"
+                ></path>
               </g>
             </svg>
             <div class="start__container">
               <div class="start__row">
-                <div class="start__title">Developers all over the world are happily using Treact.</div>
+                <div class="start__title">
+                  Developers all over the world are happily using Treact.
+                </div>
                 <div class="start__buttons">
                   <button class="start__button btn">Get Started</button>
                   <button class="start__button btn">Contact Us</button>
@@ -518,22 +562,60 @@
       </svg>
       <div class="row footer__row">
         <div class="footer__columns">
-          <div class="footer__column--title"></div> 
-          <a href="" class="footer__column--link"></a>
-          <a href="" class="footer__column--link"></a>
-          <a href="" class="footer__column--link"></a>
-          <a href="" class="footer__column--link"></a>
+          <div class="footer__column">
+            <div class="footer__column--title">MAIN</div>
+            <a class="footer__column--link">Blog</a>
+            <a class="footer__column--link">FAQs</a>
+            <a class="footer__column--link">Support</a>
+            <a class="footer__column--link">About Us</a>
+          </div>
+          <div class="footer__column">
+            <div class="footer__column--title">PRODUCT</div>
+            <a class="footer__column--link">Log In</a>
+            <a class="footer__column--link">Personal</a>
+            <a class="footer__column--link">Business</a>
+            <a class="footer__column--link">Team</a>
+          </div>
+          <div class="footer__column">
+            <div class="footer__column--title">PRESS</div>
+            <a class="footer__column--link">Logos</a>
+            <a class="footer__column--link">Events</a>
+            <a class="footer__column--link">Stories</a>
+            <a class="footer__column--link">Office</a>
+          </div>
+          <div class="footer__column">
+            <div class="footer__column--title">TEAM</div>
+            <a class="footer__column--link">Career</a>
+            <a class="footer__column--link">Founders</a>
+            <a class="footer__column--link">Cultures</a>
+            <a class="footer__column--link">Onboarding</a>
+          </div>
+          <div class="footer__column">
+            <div class="footer__column--title">LEGAL</div>
+            <a class="footer__column--link">GDPR</a>
+            <a class="footer__column--link">Privacy Policy</a>
+            <a class="footer__column--link">Terms of Service</a>
+            <a class="footer__column--link">Disclaimer</a>
+          </div>
         </div>
-        <div class="footer__divider">
-
-        </div>
+        <div class="footer__divider"></div>
         <div class="footer__bottom">
-          <div class="footer_logo">
-            <img src="./assets/logo-light.d9a5d1b5be5ea077b26864fdfc2e96a4.svg" alt="" class="footer__logo--img">
+          <div class="footer__logo">
+            <img src="./assets/logo-light.d9a5d1b5be5ea077b26864fdfc2e96a4.svg" alt class="footer__logo--img">
             <h5 class="footer__logo--text">Treact Inc.</h5>
           </div>
-          <div class="footer__copyrights"></div>
-          <div class="footer__socials"></div>
+          <div class="footer__copyright"> © 2018 Treact Inc. All Rights Reserved. </div>
+          <div class="footer__socials">
+            <a class="footer__social--link">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a class="footer__social--link">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a class="footer__social--link">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
         </div>
       </div>
     </footer>
