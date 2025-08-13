@@ -8,6 +8,17 @@
     color: #243e63;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+
 body {
     max-width: 100vw;
     overflow-x: hidden;
@@ -108,6 +119,11 @@ main {
     main {
         margin-bottom: 80px;
     }
+
+    .section__title {
+        font-size: 30px;
+    }
+    
 }
 
 @media (max-width: 1024px) {
@@ -466,6 +482,10 @@ header {
         font-size: 14px;
         letter-spacing: 0.05em;
     }
+
+     .header__email--input {
+    padding: 16px 32px 16px 32px; /* smaller right padding */
+    }
 }
 
 
@@ -576,7 +596,76 @@ header {
 /* Features Media */
 
 @media (max-width: 640px) {
-    #features .section__title
+    #features .section__title {
+        font-size: 36px;
+    }
+
+    .feature__row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .feature__text {
+        margin-left: 0px;
+        margin-top: 16px;
+    }
+
+    .feature__title {
+        letter-spacing: 0.025em;
+        line-height: 1;
+    }
+
+    .feature__para {
+        margin-top: 4px;
+        line-height: 2;
+    }
+}
+
+@media (max-width: 1024px) {
+    #features .section__title {
+        font-size: 48px;
+    }
+
+    .section__para {
+        font-size: 16px;
+    }
+
+    .features {
+        max-width: 768px;
+    }
+
+    .feature {
+        width: calc(50%);
+    }
+
+    .feature__row {
+        padding: 32px 8px;
+        margin: 0 16px;
+    }
+
+    .feature__title {
+        line-height: 1;
+    }
+
+    .feature__para {
+        max-width: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .section__para {
+        font-size: 14px;
+    }
+
+    .features {
+        justify-content: center;
+    }
+
+    .feature {
+        width: auto;
+        max-width: 384px;
+    }
 }
 
 /*Quality*/
@@ -629,6 +718,32 @@ header {
     margin: 0 56px;
     z-index: 2;
     display: flex;
+}
+
+/* Quality Media */
+
+@media (max-width: 768px) {
+    #quality .row {
+        flex-direction:column-reverse
+    }
+
+    .quality__description, .quality__img--wrapper {
+        width: 100%;
+        max-width: 448px;
+    }
+
+    .quality__description {
+        padding: 0;
+        margin-top: 64px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    .quality__description {
+        margin-right: 0px;
+        padding-right: 48px;
+    }
 }
 
 /* Steps */

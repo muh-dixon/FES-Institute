@@ -11,7 +11,7 @@
     ></script>
     <script src="index.js"></script>
   </head>
-  <body class=" menu--open">
+  <body>
     <section id="landing">
       <nav>
         <div class="nav__row row">
@@ -27,12 +27,12 @@
             <a href="#" class="nav__link">About</a>
             <a href="#" class="nav__link ">Blog</a>
             <a href="#" class="nav__link ">Pricing</a>
-            <a href="#" class="nav__link ">Contact Us<a>
+            <a href="#" class="nav__link ">Contact Us</a>
             <a href="#" class="nav__link login">Login</a>
             <a href="#" class="nav__link nav__link--secondary">Sign Up</a>
           </div>
           <button class="btn__menu" onclick="openMenu()">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn__menu--svg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn__menu--svg" onclick="openMenu()">
               <line x1="3" y1="12" x2="21" y2="12"></line>
               <line x1="3" y1="6" x2="21" y2="6"></line>
               <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -68,14 +68,14 @@
                 modular components with a variety of pages and components.
               </p>
 
-              <div class="header__email">
+              <form class="header__email">
                 <input
-                  type="text"
+                  type="email"
                   class="header__email--input"
                   placeholder="Your E-mail Address"
                 >
                 <button class="header__email--btn">Get Started</button>
-              </div>
+              </form>
               <p class="header__customers--title">OUR TRUSTED CUSTOMERS</p>
               <img
                 src="./assets/customers-logo-strip.680ac7c2e8ae28161d2c.png"
