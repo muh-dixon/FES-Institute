@@ -47,6 +47,7 @@ a:hover {
 nav {
     display: flex;
     justify-content: space-between;
+    padding-top: 16px;
 }
 
 .nav__container {
