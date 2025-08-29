@@ -330,6 +330,7 @@ nav{
 .project__img {
     width: 100%;
     transition: all 500ms ease;
+    transform: scaleY(1.0148);
 }
 
 .project__wrapper {
