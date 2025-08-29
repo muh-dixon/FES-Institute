@@ -324,7 +324,7 @@ nav{
 /*Projects*/
 
 .project {
-    margin: 16px 0;
+    padding: 16px 0;
 }
 
 .project__img {
