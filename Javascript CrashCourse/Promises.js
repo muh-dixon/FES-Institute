@@ -31,7 +31,7 @@ function getSubcription() {
 //async/await
 async function stats()
 {
-    const status = await getSubcription();
+    const status = await getSubcription(); 
     statusRef.innerHTML = status;
     try {
         const vidStat = await getVid(status)
