@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Subscription Platform</title>
+    <link rel="stylesheet" href="./Find_Your_Movie.css" />
+    <script
+      src="https://kit.fontawesome.com/507cd13abb.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./Find_Your_Movie.js" defer></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <div class="search__section">
+          <div class="navbar">
+            <div class="navbar__img">
+              <img
+                id="personal-logo "
+                class="navbar__img"
+                src="./assets/movie__logo2.PNG"
+                alt=""
+              />
+            </div>
+            <ul class="nav__link--list">
+              <li class="nav__link">
+                <a
+                  href="./Project.html"
+                  class="nav__link--anchor link__hover-effect link__hover-effect--black"
+                  >Home</a
+                >
+              </li>
+              <li class="nav__link">
+                <a
+                  href="#projects"
+                  class="nav__link--anchor link__hover-effect link__hover-effect--black"
+                  >Find Your Movie</a
+                >
+              </li>
+              <li class="nav__link--contact" onclick="toggleModal()">
+                <a
+                  href="#"
+                  class="nav__link--anchor link__hover-effect link__hover-effect--black"
+                  >Contact</a
+                >
+              </li>
+              <li class="nav__link click" onclick="toggleContrast()">
+                <a
+                  href="#"
+                  class="nav__link--anchor link__hover-effect link__hover-effect--black"
+                  ><i class="fa-solid fa-circle-half-stroke"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div class="search__bar">
+            <h1 class="nav__search--title">Browse our Movie List</h1>
+            <div class="nav__search--wrapper">
+              <form onsubmit="handleSearch(event)">
+                <input
+                  id="search-input"
+                  class="nav__search--bar"
+                  type="text"
+                  placeholder="Search by Title, Year, imbdID, or Type"
+                />
+                <button type="submit" class="nav__search--img">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="overlay"></div>
+        </div>
+        <section id="search">
+          <div id="filter" class="filter__wrapper">
+            <h1 class="filter__info">Search Results:</h1>
+            <div class="filter__list">
+              <select id="filter" onchange="filterMovies(event)">
+                <option value="" disabled selected>Sort</option>
+                <option value="TITLE">Title</option>
+                <option value="YEAR">Year</option>
+                <option value="IMDBID">imdbID</option>
+              </select>
+            </div>
+          </div>
+          <div id="movies">
+            <div class="moves__container">
+              <div class="movies__row">
+                <div class="movie-list">
+                  <div class="user">
+                    <div class="user-card">
+                      <div class="user-card__container">
+                        <img
+                          src="https://m.media-amazon.com/images/M/MV5BOTE3YTExYTEtOTUxZC00OTM0LWJmYmItMDk5YjczNmIwNzA2XkEyXkFqcGc@._V1_SX300.jpg"
+                          alt=""
+                          srcset=""
+                        />
+                        <p><b>Title:</b> movie name</p>
+                        <p><b>Year:</b> 2000</p>
+                        <p><b>imdbID:</b>tt12920838</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="modal">
+        <div class="modal__half modal__about">
+          <h3 class="modal__title modal__title--about">
+            Here's a bit about me
+          </h3>
+          <h4 class="modal__sub-title modal__sub-title--about">
+            FrontEnd Software engineering
+          </h4>
+          <p class="modal__para">
+            I'm a <b class="yellow">Towson University</b> gradute with a B.A. in
+            Computer Science with a strong passion im software engineering
+            <br />
+            adadf
+          </p>
+          <div class="modal__languages">
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                alt=""
+              />
+              <span class="language__name">HTML</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png"
+                alt=""
+              />
+              <span class="language__name">CSS</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png"
+                alt=""
+              />
+              <span class="language__name">JavaScript</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png"
+                alt=""
+              />
+              <span class="language__name">React</span>
+            </figure>
+          </div>
+        </div>
+        <div class="modal__half modal__contact">
+          <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+          <h3 class="modal__title modal__title--contact">
+            Let's have a chat!!
+          </h3>
+          <h4 class="modal__sub-title modal__sub-title--contact">
+            I'm currently open to new opportunites.
+          </h4>
+          <form action="" id="contact__form" onsubmit="contact(event)">
+            <div class="form__item" on>
+              <label class="form__item--label">name</label>
+              <input type="text" class="input" name="user_name" />
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">email</label>
+              <input type="email" class="input" name="user_email" />
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">message</label>
+              <textarea
+                type="text"
+                class="input"
+                name="user_message"
+              ></textarea>
+            </div>
+            <button id="contact__submit" class="form__submit">
+              Send it my way!
+            </button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fas fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+            Thanks for the message looking forward to speaking with you soon
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
